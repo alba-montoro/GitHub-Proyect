@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ asset('assets/style/styles.css') }}" rel="stylesheet" />
+        @yield('css')
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -32,6 +33,7 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ action([App\Http\Controllers\MainController::class, 'about']) }}">About3</a></li>
                         --> 
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('about') }}">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('porfolio') }}">Portfolio</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://ieszaidinvergeles.org">IES ZV</a></li>
                     </ul>
                 </div>
@@ -41,6 +43,8 @@
         <header class="masthead bg-primary text-white text-center">
             @yield('content') <!-- directiva de blade (@WORD) -->
         </header>
+        <!-- Portfolio seccion -->
+        @yield('postcontent')
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">
@@ -83,6 +87,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="{{ asset('assets/script/scripts.js') }}"></script>
+        @yield('script')
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->

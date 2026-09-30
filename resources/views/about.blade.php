@@ -1,4 +1,4 @@
-@extends('template.base') //heredo
+@extends('index') //heredo
 <!-- @directiva de blade, para indicar que se hereda de un documento -->
 
 
